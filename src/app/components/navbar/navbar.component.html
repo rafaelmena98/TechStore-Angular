@@ -1,0 +1,46 @@
+<nav class="navbar">
+  <div class="nav-brand">
+    <h2>TechStore Angular</h2>
+  </div>
+
+  <ul class="nav-categories">
+    <li><a href="#">Todos</a></li>
+    <li><a href="#">Monitores</a></li>
+    <li><a href="#">Almacenamiento</a></li>
+    <li><a href="#">Periféricos</a></li>
+  </ul>
+
+  <div class="nav-cart">
+    <button class="cart-btn" (click)="toggleCart()">
+      🛒 Carrito
+      <span class="cart-badge" *ngIf="count > 0">{{ count }}</span>
+    </button>
+  </div>
+</nav>
+
+<div class="cart-overlay" [class.active]="isCartOpen" (click)="toggleCart()"></div>
+
+<div class="cart-panel" [class.active]="isCartOpen">
+  <div class="cart-header">
+    <h3>Tu Carrito</h3>
+    <button class="close-btn" (click)="toggleCart()">✖</button>
+  </div>
+
+  <div class="cart-body">
+    <div *ngIf="cartItems.length === 0" style="text-align: center; color: #777; margin-top: 20px;">
+      <p>Tus artículos aparecerán aquí.</p>
+    </div>
+
+    <div *ngFor="let item of cartItems" class="cart-item-row" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee;">
+      <div style="text-align: left;">
+        <h5 style="margin: 0; font-size: 1em;">{{ item.title }}</h5>
+        <small style="color: #0056b3; font-weight: bold;">${{ item.price }}</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-footer">
+    <h4>Total: ${{ totalAmount | number:'1.2-2' }}</h4>
+    <button class="checkout-btn">Proceder al pago</button>
+  </div>
+</div>

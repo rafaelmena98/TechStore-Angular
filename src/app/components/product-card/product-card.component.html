@@ -1,0 +1,13 @@
+<div style="border: 1px solid #ddd; padding: 15px; width: 220px; text-align: center; border-radius: 8px;">
+  <img [src]="product.image" alt="Imagen del producto">
+
+  <h4 style="font-size: 14px; height: 40px; overflow: hidden;">{{ product.title }}</h4>
+
+  <span style="font-size: 11px; color: gray; display: block; margin-bottom: 5px;">{{ product.category | uppercase }}</span>
+
+  <p style="font-size: 18px; margin: 10px 0;"><strong>${{ product.price | number:'1.2-2' }}</strong></p>
+
+  <button (click)="cart.addToCart(product)" style="background-color: #007bff; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; width: 100%;">
+    Añadir al Carrito
+  </button>
+</div>
