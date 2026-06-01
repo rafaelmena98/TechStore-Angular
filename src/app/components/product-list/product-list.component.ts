@@ -20,7 +20,7 @@ export class ProductListComponent {
       price: 999.99,
       description:
         'Rendimiento bestial para tus juegos first person shooter. La ventaja competitiva que necesitas con 144Hz y 1ms de respuesta.',
-      image: '/images/monitor.png',
+      image: 'images/monitor.png',
       category: 'electronics',
     },
     {
@@ -29,7 +29,7 @@ export class ProductListComponent {
       price: 114.0,
       description:
         'Potencia extrema y espacio de sobra para renderizado y gaming pesado. Lleva tu biblioteca a donde quieras.',
-      image: '/images/disco.png',
+      image: 'images/disco.png',
       category: 'electronics',
     },
     {
@@ -38,7 +38,7 @@ export class ProductListComponent {
       price: 109.0,
       description:
         'Actualización fácil para un arranque más rápido. El equilibrio perfecto entre rendimiento y fiabilidad para tu setup.',
-      image: '/images/ssd.png',
+      image: 'images/ssd.png',
       category: 'electronics',
     },
   ];
